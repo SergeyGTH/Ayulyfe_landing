@@ -2,15 +2,15 @@
 <html lang="en" itemscope itemtype="https://schema.org/WebPage">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-68P2L76TYR"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CNCZ4B50W4"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-68P2L76TYR');
+  gtag('config', 'G-CNCZ4B50W4');
 </script>
-  
+
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 
@@ -769,6 +769,7 @@ footer{background:var(--text-dark);padding:4rem 6rem 2rem;}
       <li><a onclick="showPage('home');scrollToId('programs')">Programs</a></li>
       <li><a onclick="showPage('home');scrollToId('faq')">FAQ</a></li>
     <li><a onclick="showPage('home');scrollToId('community')">Community</a></li>
+      <li><a onclick="revealAccountDeletion()">Delete Account</a></li>
       <li><a href="mailto:support@ayulyfe.com">Contact</a></li>
     </ul></div>
     <div class="footer-col"><h5>Download</h5><ul>
@@ -777,6 +778,24 @@ footer{background:var(--text-dark);padding:4rem 6rem 2rem;}
       <li><a href="mailto:support@ayulyfe.com">support@ayulyfe.com</a></li>
     </ul></div>
   </div>
+  <div id="account-deletion" class="account-deletion-panel" style="display:none;max-width:760px;margin:1.5rem auto;padding:2.2rem 2.4rem;background:var(--warm-white);border-radius:14px;position:relative;">
+    <button onclick="hideAccountDeletion()" aria-label="Close" style="position:absolute;top:0.9rem;right:1rem;width:30px;height:30px;border-radius:50%;border:1px solid var(--border);background:transparent;color:var(--text-mid);font-size:0.9rem;cursor:pointer;line-height:1;">&#10005;</button>
+    <p class="section-eyebrow center" style="justify-content:center;">Your Data, Your Control</p>
+    <h2 class="section-h2" style="text-align:center;font-size:clamp(1.6rem,2.4vw,2.2rem);margin-bottom:1.2rem;">Account &amp; Data Deletion</h2>
+    <p style="font-size:0.88rem;color:var(--text-mid);line-height:1.8;font-weight:300;text-align:center;margin-bottom:1.8rem;">If you created an AYULYFE account, you can request that your account and all personal data associated with it be permanently deleted at any time &mdash; whether or not you still have the app installed.</p>
+
+    <div style="border-top:1px solid var(--border);">
+      <div style="border-bottom:1px solid var(--border);padding:1.3rem 0;">
+        <h3 style="font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--text-dark);margin-bottom:0.6rem;">How to request deletion</h3>
+        <p style="font-size:0.88rem;color:var(--text-mid);line-height:1.8;font-weight:300;">Email <a href="mailto:support@ayulyfe.com?subject=Delete%20My%20Account%20Request" style="color:var(--clay);text-decoration:none;">support@ayulyfe.com</a> from the address linked to your AYULYFE account with the subject line &ldquo;Delete My Account Request,&rdquo; and include the email address associated with your account so we can locate it.</p>
+      </div>
+      <div style="padding:1.3rem 0;">
+        <h3 style="font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--text-dark);margin-bottom:0.6rem;">What gets deleted</h3>
+        <p style="font-size:0.88rem;color:var(--text-mid);line-height:1.8;font-weight:300;">Within 30 days of receiving your request, we permanently delete your account and all associated personal data, including your profile information (name, email address), your Dosha quiz and Agni assessment results, all your data, and in-app activity history. No data is retained after deletion.</p>
+      </div>
+    </div>
+  </div>
+
   <div class="footer-bottom"><p>© 2025 AYULYFE. All rights reserved.</p><a href="https://www.instagram.com/ayulyfe.ayurveda" target="_blank" class="social-link">✦</a></div>
 </footer>
 
@@ -893,6 +912,7 @@ footer{background:var(--text-dark);padding:4rem 6rem 2rem;}
       <li><a onclick="showPage('home');scrollToId('programs')">Programs Preview</a></li>
       <li><a onclick="showPage('home');scrollToId('faq')">FAQ</a></li>
     <li><a onclick="showPage('home');scrollToId('community')">Community</a></li>
+      <li><a onclick="revealAccountDeletion()">Delete Account</a></li>
     </ul></div>
     <div class="footer-col"><h5>Download</h5><ul>
       <li><a href="https://apps.apple.com/us/app/ayulyfe/id6737919451" target="_blank">iOS App Store</a></li>
@@ -925,6 +945,30 @@ function scrollToId(id) {
     if (el) el.scrollIntoView({behavior:'smooth', block:'start'});
   }, 100);
 }
+
+function revealAccountDeletion() {
+  showPage('home');
+  const panel = document.getElementById('account-deletion');
+  if (!panel) return;
+  panel.style.display = 'block';
+  setTimeout(() => panel.scrollIntoView({behavior:'smooth', block:'center'}), 150);
+}
+
+function hideAccountDeletion() {
+  const panel = document.getElementById('account-deletion');
+  if (panel) panel.style.display = 'none';
+}
+
+// Deep-link support: if the page is loaded (or navigated) with
+// #account-deletion in the URL — e.g. from the Google Play Data Safety
+// links — automatically open the panel instead of leaving it hidden.
+function checkAccountDeletionHash() {
+  if (window.location.hash === '#account-deletion') {
+    revealAccountDeletion();
+  }
+}
+checkAccountDeletionHash();
+window.addEventListener('hashchange', checkAccountDeletionHash);
 
 // NAVBAR
 const navbar = document.getElementById('navbar');
