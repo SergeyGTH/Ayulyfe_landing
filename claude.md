@@ -26,7 +26,7 @@ Repository: SergeyGTH/Ayulyfe_landing. No build step, no framework.
   (example: `<!-- Ver. 20261014_01 -->`). When I ask for a release or change,
   update it to today's date with the next number for that day.
   It is an HTML comment, so it is invisible in the browser by design.
-- The page contains Google Tag Manager / Google Analytics scripts.
+- The page contains Google Analytics (gtag) scripts.
   Do not remove or change them unless I ask.
 - Download buttons link to the App Store and Google Play. Keep these links
   and the app IDs unchanged unless I give new ones.
