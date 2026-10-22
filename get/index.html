@@ -1,0 +1,51 @@
+<!-- Ver. 20261022_01 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get the AYULYFE app</title>
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://ayulyfe.com/">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PBYEY4NG2T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PBYEY4NG2T');
+</script>
+<style>
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#f9f6f0;color:#273028;font-family:'Helvetica Neue',Arial,sans-serif;font-weight:300;text-align:center;padding:16px;box-sizing:border-box;}
+  h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:1.8rem;margin:0 0 1rem;}
+  p{color:#4e6358;margin:0 0 1.5rem;}
+  .btns{display:flex;flex-direction:column;gap:0.8rem;align-items:center;}
+  .btns a{display:inline-block;min-width:220px;padding:0.85rem 1.4rem;border-radius:3rem;text-decoration:none;font-weight:500;font-size:0.9rem;background:#6e9480;color:#fff;}
+  .btns a + a{background:#9e6b52;}
+</style>
+</head>
+<body>
+<main>
+  <h1>Opening your app store…</h1>
+  <p>If nothing happens, choose your store:</p>
+  <div class="btns">
+    <a id="ios" href="https://apps.apple.com/us/app/ayulyfe/id6737919451">App Store (iPhone, iPad)</a>
+    <a id="android" href="https://play.google.com/store/apps/details?id=com.nbadvisory.ayulyfe&hl=en">Google Play (Android)</a>
+  </div>
+</main>
+<script>
+(function(){
+  var ua = navigator.userAgent || '';
+  var isAndroid = /Android/i.test(ua);
+  var isIOS = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var target = isAndroid ? document.getElementById('android').href
+             : isIOS ? document.getElementById('ios').href
+             : 'https://ayulyfe.com/#download';
+  var done = false;
+  function go(){ if (!done) { done = true; location.replace(target); } }
+  gtag('event', 'qr_get_app', {platform: isAndroid ? 'android' : (isIOS ? 'ios' : 'desktop'), event_callback: go});
+  setTimeout(go, 800);
+})();
+</script>
+</body>
+</html>
