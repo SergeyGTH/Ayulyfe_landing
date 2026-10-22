@@ -1,4 +1,4 @@
-<!-- Ver. 20261022_02 -->
+<!-- Ver. 20261022_03 -->
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="https://schema.org/WebPage">
 <head>
@@ -347,6 +347,12 @@ blockquote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.5
 .download-text p{font-size:0.9rem;color:var(--text-mid);line-height:1.85;font-weight:300;margin-bottom:2.2rem;}
 .store-buttons{display:flex;gap:1rem;flex-wrap:wrap;}
 .store-btn{display:flex;align-items:center;gap:0.7rem;background:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.9);color:var(--text-dark);text-decoration:none;padding:0.85rem 1.4rem;border-radius:12px;transition:background 0.3s;min-width:150px;}
+.get-qr{display:flex;align-items:center;gap:1.1rem;margin-top:1.8rem;}
+.get-qr-code{flex:none;width:96px;height:96px;padding:8px;background:#fff;border-radius:12px;box-shadow:0 2px 10px rgba(39,48,40,0.08);}
+.get-qr-code svg{display:block;width:100%;height:100%;}
+.get-qr p{font-size:0.8rem;line-height:1.6;color:var(--text-mid);max-width:15rem;margin:0;}
+.get-qr p strong{font-weight:500;color:var(--text-dark);}
+@media (max-width:960px),(hover:none){.get-qr{display:none;}}
 .store-btn:hover{background:rgba(255,255,255,0.95);}
 .store-btn-icon{font-size:1.5rem;}
 .store-btn-text .small{font-size:0.58rem;opacity:0.65;letter-spacing:0.05em;display:block;}
@@ -487,7 +493,7 @@ footer{background:var(--text-dark);padding:4rem 6rem 2rem;}
     <li><a onclick="showPage('home');scrollToId('programs')">Programs</a></li>
     <li><a onclick="showPage('home');scrollToId('faq')">FAQ</a></li>
     <li><a onclick="showPage('home');scrollToId('community')">Community</a></li>
-    <li><a href="https://apps.apple.com/us/app/ayulyfe/id6737919451" target="_blank" class="nav-cta">Download App</a></li>
+    <li><a href="https://apps.apple.com/us/app/ayulyfe/id6737919451" target="_blank" class="nav-cta" data-get-app>Download App</a></li>
   </ul>
 </nav>
 
@@ -501,7 +507,7 @@ footer{background:var(--text-dark);padding:4rem 6rem 2rem;}
     <h1>Your body is<br><em>uniquely</em><br>yours.</h1>
     <p class="hero-sub">AYULYFE translates 5,000 years of Ayurvedic science into a daily companion — personalized to your dosha, your season, your life.</p>
     <div class="hero-actions">
-      <a href="https://apps.apple.com/us/app/ayulyfe/id6737919451" target="_blank" class="btn-primary">⬇ Download — Try Free</a>
+      <a href="https://apps.apple.com/us/app/ayulyfe/id6737919451" target="_blank" class="btn-primary" data-get-app>⬇ Download — Try Free</a>
       <a onclick="scrollToId('why')" class="btn-ghost">Discover More</a>
     </div>
   </div>
@@ -587,7 +593,7 @@ footer{background:var(--text-dark);padding:4rem 6rem 2rem;}
   </div>
   <div class="experts-cta reveal">
     <p class="experts-cta-lead">See how classical Ayurveda meets <em>modern technology</em> in the AYULYFE app.</p>
-    <a href="https://apps.apple.com/us/app/ayulyfe/id6737919451" target="_blank" class="btn-ghost">⬇ Get the App</a>
+    <a href="https://apps.apple.com/us/app/ayulyfe/id6737919451" target="_blank" class="btn-ghost" data-get-app>⬇ Get the App</a>
     <span class="quiz-note">Free to try · iOS &amp; Android</span>
   </div>
 </section>
@@ -640,7 +646,7 @@ footer{background:var(--text-dark);padding:4rem 6rem 2rem;}
     </div></div>
   </div>
   <div class="dosha-cta-row reveal">
-    <a href="https://apps.apple.com/us/app/ayulyfe/id6737919451" target="_blank" class="quiz-link">🌿 Discover My Dosha in App</a>
+    <a href="https://apps.apple.com/us/app/ayulyfe/id6737919451" target="_blank" class="quiz-link" data-get-app>🌿 Discover My Dosha in App</a>
     <span class="quiz-note">Free to try · 5 minutes · iOS &amp; Android</span>
   </div>
 </section>
@@ -665,7 +671,7 @@ footer{background:var(--text-dark);padding:4rem 6rem 2rem;}
       <div class="agni-type"><div class="at-icon">⚡</div><h5>Tikshna Agni</h5><p>Sharp — Pitta dominant. Hyperacidity, inflammation, strong hunger.</p></div>
       <div class="agni-type"><div class="at-icon">🍂</div><h5>Manda Agni</h5><p>Slow — Kapha dominant. Weight gain, lethargy, slow metabolism.</p></div>
     </div>
-    <a href="https://apps.apple.com/us/app/ayulyfe/id6737919451" target="_blank" class="quiz-cta">🔥 Take the Agni Quiz in App</a>
+    <a href="https://apps.apple.com/us/app/ayulyfe/id6737919451" target="_blank" class="quiz-cta" data-get-app>🔥 Take the Agni Quiz in App</a>
     <span class="quiz-cta-note">Free to try on iOS &amp; Android · Takes 3 minutes</span>
   </div>
 </section>
@@ -713,7 +719,7 @@ footer{background:var(--text-dark);padding:4rem 6rem 2rem;}
   </div>
   <div class="programs-cta-row reveal">
     <a onclick="showPage('programs');scrollTo(0,0)" class="btn-prog-primary">Explore All Programs →</a>
-    <a href="https://apps.apple.com/us/app/ayulyfe/id6737919451" target="_blank" class="btn-prog-ghost">⬇ Download &amp; Try Free</a>
+    <a href="https://apps.apple.com/us/app/ayulyfe/id6737919451" target="_blank" class="btn-prog-ghost" data-get-app>⬇ Download &amp; Try Free</a>
   </div>
 </section>
 
@@ -749,6 +755,10 @@ footer{background:var(--text-dark);padding:4rem 6rem 2rem;}
     <div class="store-buttons">
       <a href="https://apps.apple.com/us/app/ayulyfe/id6737919451" target="_blank" class="store-btn" aria-label="Download AYULYFE on the App Store"><span class="store-btn-icon">🍎</span><span class="store-btn-text"><span class="small">Download on the</span><span class="big">App Store</span></span></a>
       <a href="https://play.google.com/store/apps/details?id=com.nbadvisory.ayulyfe&hl=en" target="_blank" class="store-btn" aria-label="Get AYULYFE on Google Play"><span class="store-btn-icon">▶</span><span class="store-btn-text"><span class="small">Get it on</span><span class="big">Google Play</span></span></a>
+    </div>
+    <div class="get-qr">
+      <div class="get-qr-code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" shape-rendering="crispEdges" role="img" aria-label="QR code to get the AYULYFE app"><path class="qrline" stroke="#273028" d="M0 0.5h7m1 0h1m1 0h1m3 0h1m3 0h7m-25 1h1m5 0h1m4 0h1m1 0h2m1 0h1m1 0h1m5 0h1m-25 1h1m1 0h3m1 0h1m1 0h3m1 0h2m2 0h1m1 0h1m1 0h3m1 0h1m-25 1h1m1 0h3m1 0h1m3 0h5m3 0h1m1 0h3m1 0h1m-25 1h1m1 0h3m1 0h1m2 0h1m1 0h1m2 0h1m3 0h1m1 0h3m1 0h1m-25 1h1m5 0h1m1 0h1m1 0h1m1 0h1m1 0h1m3 0h1m5 0h1m-25 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-16 1h1m2 0h1m1 0h3m-17 1h1m1 0h1m3 0h2m2 0h3m1 0h1m1 0h1m2 0h1m2 0h1m1 0h1m-25 1h2m1 0h3m1 0h3m3 0h1m1 0h1m1 0h3m1 0h1m1 0h2m-25 1h8m4 0h1m2 0h1m1 0h1m2 0h3m1 0h1m-25 1h3m1 0h1m2 0h3m1 0h2m1 0h1m1 0h2m3 0h1m-20 1h1m2 0h5m2 0h1m2 0h2m1 0h2m4 0h1m-23 1h1m1 0h2m2 0h2m2 0h1m2 0h5m3 0h2m-25 1h3m1 0h3m3 0h1m1 0h1m2 0h2m1 0h1m2 0h2m1 0h1m-23 1h1m1 0h1m2 0h6m1 0h4m1 0h3m-22 1h2m1 0h2m1 0h1m1 0h2m2 0h1m2 0h6m2 0h1m-16 1h2m6 0h1m3 0h1m3 0h1m-25 1h7m1 0h1m2 0h3m2 0h1m1 0h1m1 0h1m3 0h1m-25 1h1m5 0h1m2 0h2m3 0h3m3 0h1m-21 1h1m1 0h3m1 0h1m2 0h4m2 0h6m2 0h1m-24 1h1m1 0h3m1 0h1m2 0h1m4 0h2m1 0h1m2 0h1m1 0h2m-24 1h1m1 0h3m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h3m1 0h2m-25 1h1m5 0h1m2 0h1m1 0h2m2 0h6m-21 1h7m1 0h2m2 0h1m1 0h1m1 0h3m2 0h1m2 0h1"/></svg></div>
+      <p><strong>On a computer?</strong> Scan with your phone's camera to get the app for iPhone or Android.</p>
     </div>
   </div>
   <div class="reveal">
@@ -1020,6 +1030,26 @@ function scrollToId(id) {
     if (el) el.scrollIntoView({behavior:'smooth', block:'start'});
   }, 100);
 }
+
+// SMART APP LINKS: Android -> Google Play, iPhone/iPad -> App Store, computers -> download block with both stores
+(function(){
+  var PLAY = 'https://play.google.com/store/apps/details?id=com.nbadvisory.ayulyfe&hl=en';
+  var ua = navigator.userAgent || '';
+  var isAndroid = /Android/i.test(ua);
+  var isIOS = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var platform = isAndroid ? 'android' : (isIOS ? 'ios' : 'desktop');
+  document.querySelectorAll('a[data-get-app]').forEach(function(a){
+    if (isAndroid) a.href = PLAY;
+    a.addEventListener('click', function(e){
+      if (typeof gtag === 'function') gtag('event', 'get_app_click', {platform: platform, link_text: a.textContent.trim()});
+      if (platform !== 'desktop') return;
+      e.preventDefault();
+      var home = document.getElementById('page-home');
+      if (home && !home.classList.contains('active')) showPage('home');
+      scrollToId('download');
+    });
+  });
+})();
 
 function revealAccountDeletion() {
   showPage('home');
