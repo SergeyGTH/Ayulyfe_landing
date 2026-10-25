@@ -62,6 +62,23 @@ Repository: SergeyGTH/Ayulyfe_landing. No build step, no framework.
   in the FAQ structured data). Keep them in sync when bios change.
 - Keep the Account & Data Deletion section and the support@ayulyfe.com contact.
 
+## Mobile and tablet (keep the site adaptive)
+- Every change to index.html must work on phones and tablets, not only on a
+  computer. Before showing a change, check it at 360px and 390px (phones),
+  768px (tablet) and a desktop width:
+  - no sideways scrolling (the page must not be wider than the screen);
+  - the menu button (top right, under 960px) opens and closes and its links work;
+  - text is readable (no text under 12px except the small uppercase labels)
+    and nothing is cut off at the screen edges;
+  - buttons and links are easy to tap (about 44px high on phones).
+- Layout switches: 960px (tablet and phone: one column, menu button) and
+  600px (phones: smaller spacing, smaller Agni circle). Put new mobile rules in
+  the "MOBILE & TABLET" block at the end of the styles.
+- Avoid fixed widths wider than about 320px; use max-width or percentages.
+- The FAQ opens one answer at a time on tap. New FAQ entries keep the same
+  structure (question in `itemprop="name"`, answer in `itemprop="acceptedAnswer"`)
+  and are added to the FAQ structured data too.
+
 ## How to work with me
 - I am learning Git and web development. Explain what you are doing in plain
   words and keep changes small.
