@@ -13,6 +13,21 @@ Repository: SergeyGTH/Ayulyfe_landing. No build step, no framework.
 
 ## Files
 - `index.html` is the page that is served. Almost all edits go here.
+- `images/` holds the founders' photos used in the Experts section
+  (`dr-sreelal-sankar` and `poornima-mukkanniyil`, each as .webp and .jpg).
+  Keep the file names: index.html and its structured data point to them.
+- `og-image.jpg` (1200x630 share card), `icon.png` (512x512 app icon) and
+  `app-screenshot.png` (App Store frame 1) sit in the repo root next to
+  index.html. They are not shown on the page: social apps use og-image.jpg
+  for link previews, and Google uses icon.png and app-screenshot.png from
+  the structured data. Keep the names and keep them in the root. If one is
+  replaced, keep the same size.
+- `get/index.html` is a small redirect page at ayulyfe.com/get/. The QR code
+  in the download block points to it. It sends Android phones to Google Play,
+  iPhones/iPads to the App Store and computers to the download block on the
+  home page. It is hidden from Google (noindex). It can also be used as one
+  short "get the app" link in emails or print. Do not rename or move the
+  folder: the QR code has this address built in.
 - `ayulyfe-redesign-clean_SO_20260421_04.html` is an old design draft.
   It is NOT served. Do not edit it unless I ask.
 - `CNAME` keeps ayulyfe.com attached to the site. NEVER edit, rename or delete it.
@@ -22,14 +37,29 @@ Repository: SergeyGTH/Ayulyfe_landing. No build step, no framework.
 - There are TWO footers. When changing copyright text or footer content,
   search the whole file (for example for "2025" or "AYULYFE. All rights")
   and update every occurrence.
-- Version comment near the top: `<!-- Ver. YYYYMMDD_NN -->`
+- Version comment on the first line: `<!-- Ver. YYYYMMDD_NN -->`
   (example: `<!-- Ver. 20261014_01 -->`). When I ask for a release or change,
   update it to today's date with the next number for that day.
   It is an HTML comment, so it is invisible in the browser by design.
-- The page contains Google Analytics (gtag) scripts.
-  Do not remove or change them unless I ask.
+- Every HTML page has its own version line (`index.html`, `get/index.html`).
+  Update only the version of the file you change; each file counts its own
+  numbers. Both files are called index.html, so check the first line to
+  tell them apart.
+- The page contains Google Analytics (gtag) scripts, ID G-PBYEY4NG2T.
+  `get/index.html` has the same tag. Do not remove or change them unless I ask.
 - Download buttons link to the App Store and Google Play. Keep these links
-  and the app IDs unchanged unless I give new ones.
+  and the app IDs unchanged unless I give new ones. If they change, update
+  them in both `index.html` and `get/index.html`.
+- Smart download buttons: in-page buttons marked `data-get-app` keep the App
+  Store link in the HTML, and a script at the end of the page sends Android
+  to Google Play and makes computers scroll to the download block. A new
+  general download button should get `data-get-app` too. Buttons that name
+  a store (App Store / Google Play) do not get it.
+- GA4 events from these: `get_app_click` (button clicks) and `qr_get_app`
+  (QR scans on /get/).
+- The founders appear in three places: the Experts section, the Organization
+  structured data (`founder`) and the FAQ "Who created AYULYFE?" (visible and
+  in the FAQ structured data). Keep them in sync when bios change.
 - Keep the Account & Data Deletion section and the support@ayulyfe.com contact.
 
 ## How to work with me
