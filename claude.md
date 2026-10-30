@@ -57,9 +57,24 @@ Repository: SergeyGTH/Ayulyfe_landing. No build step, no framework.
   a store (App Store / Google Play) do not get it.
 - GA4 events from these: `get_app_click` (button clicks) and `qr_get_app`
   (QR scans on /get/).
-- The founders appear in three places: the Experts section, the Organization
-  structured data (`founder`) and the FAQ "Who created AYULYFE?" (visible and
-  in the FAQ structured data). Keep them in sync when bios change.
+- The founders appear in three places: the Team section (id "experts", menu
+  label "Team"), the Organization structured data (`founder`) and the FAQ
+  "Who created AYULYFE?" (visible and in the FAQ structured data). Keep them in
+  sync when bios change.
+- AYULYFE was founded by four people: Natalia Barsegiyan (business), Sergey
+  Orlov (technology) and two Ayurvedic physicians. Never write that AYULYFE was
+  founded by the physicians alone. Only the two physicians have cards.
+- Names of the physicians: never use "Dr." (BAMS is not a doctorate outside
+  India, and NAMA says BAMS holders must not call themselves "doctor" in the
+  US). Use "Vaidya Sreelal Sankar" and "Vaidya Poornima Sreelal (Mukkanniyil)",
+  with BAMS as the qualification.
+- NAMA badge: `images/nama-organizational-member-2026.*` (Organizational
+  Member). The badge shows the year. Membership currently expires 17 Apr 2027;
+  after each renewal download the new year's badge from the NAMA members area
+  (2026 Member Badges -> Organizational Member Badge), replace both files and
+  update the file names and alt text. Remove the badge if membership lapses.
+- Tone about medicine: Ayurveda complements modern medicine, never criticise
+  or compete with it, and never make treatment or cure claims.
 - Keep the Account & Data Deletion section and the support@ayulyfe.com contact.
 
 ## Mobile and tablet (keep the site adaptive)
