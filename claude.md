@@ -28,8 +28,18 @@ Repository: SergeyGTH/Ayulyfe_landing. No build step, no framework.
   home page. It is hidden from Google (noindex). It can also be used as one
   short "get the app" link in emails or print. Do not rename or move the
   folder: the QR code has this address built in.
-- `ayulyfe-redesign-clean_SO_20260421_04.html` is an old design draft.
-  It is NOT served. Do not edit it unless I ask.
+- Favicon files in the repo root: `favicon.ico`, `favicon-32x32.png`,
+  `favicon-96x96.png`, `apple-touch-icon.png`, `icon-192.png`, `icon.png` and
+  `site.webmanifest`. They are linked in the <head> of index.html. If the app
+  icon changes, regenerate all of them from the new 512x512 icon.
+- `images/` also holds the page's own images: `logo-64.png`, `app-hero.webp`
+  (hero phone), `vata.webp`, `pitta.webp`, `kapha.webp`. Do not put images
+  inside index.html as base64 (data:image/...) again: it made the page 850 KB.
+  Add new images as files in `images/` with width, height and alt text.
+- `llms.txt`: short plain-text summary of AYULYFE for AI assistants. Keep its
+  facts (features, team, NAMA, store links) in line with index.html.
+- `robots.txt` and `sitemap.xml`: when index.html changes, set `<lastmod>` in
+  sitemap.xml to the release date.
 - `CNAME` keeps ayulyfe.com attached to the site. NEVER edit, rename or delete it.
 - `.gitattributes` and `.github/`: leave alone.
 

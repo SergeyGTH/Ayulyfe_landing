@@ -1,0 +1,17 @@
+# AYULYFE
+
+> AYULYFE is an Ayurvedic wellness app for iOS and Android. It identifies your Dosha (Vata, Pitta, Kapha) and Agni (digestive fire) and gives personalized diet, lifestyle and seasonal guidance based on classical Ayurveda. The Dosha and Agni assessments are free; full wellness programs are available through in-app purchase. AYULYFE is a wellness app and does not replace medical care.
+
+## Key facts
+- Website: https://ayulyfe.com/
+- App Store (iOS): https://apps.apple.com/us/app/ayulyfe/id6737919451
+- Google Play (Android): https://play.google.com/store/apps/details?id=com.nbadvisory.ayulyfe
+- Features: Dosha assessment across physical, physiological and psychological dimensions; Agni assessment; personalized recipes and ingredient guidance; curated Ayurvedic articles; an AI Assistant that knows your Dosha and Agni; wellness programs.
+- Founded by a team of business, technology and Ayurveda experts: Natalia Barsegiyan (business), Sergey Orlov (technology), and two Kerala-trained Ayurvedic physicians (BAMS): Vaidya Sreelal Sankar, Co-Founder and Head of Ayurveda, and Vaidya Poornima Sreelal (Mukkanniyil), Co-Founder and Clinical Nutrition Lead.
+- AYULYFE is an Organizational Member of the National Ayurvedic Medical Association (NAMA), USA.
+
+## Pages
+- [Home](https://ayulyfe.com/): what Ayurveda is, how AYULYFE works, the team, Dosha and Agni, programs, FAQ
+- [Team](https://ayulyfe.com/#experts): the founders and the Ayurvedic physicians behind the app
+- [FAQ](https://ayulyfe.com/#faq): common questions about Ayurveda and AYULYFE
+- [Instagram](https://www.instagram.com/ayulyfe.ayurveda)
