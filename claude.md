@@ -42,15 +42,22 @@ Repository: SergeyGTH/Ayulyfe_landing. No build step, no framework.
   sitemap.xml to the release date.
 - `CNAME` keeps ayulyfe.com attached to the site. NEVER edit, rename or delete it.
 - `.gitattributes` and `.github/`: leave alone.
+- `.gitignore` keeps macOS `.DS_Store` files out of git. Add other junk
+  files there if they show up in `git status`.
 
 ## Things to know about index.html
 - There are TWO footers. When changing copyright text or footer content,
   search the whole file (for example for "2025" or "AYULYFE. All rights")
   and update every occurrence.
-- Version comment on the first line: `<!-- Ver. YYYYMMDD_NN -->`
-  (example: `<!-- Ver. 20261014_01 -->`). When I ask for a release or change,
-  update it to today's date with the next number for that day.
+- Version comment on the first line: `<!-- Ver. YYYYMMDD_NN · branch-name -->`
+  (example: `<!-- Ver. 20261102_02 · ai-facts-update -->`). When I ask for a
+  release or change, update it to today's date with the next number for that
+  day, and the name of the git branch the change will be committed on (decide
+  the branch name before preparing the file and tell me to use exactly it).
   It is an HTML comment, so it is invisible in the browser by design.
+- The pull request number is not put in the file (GitHub creates it only after
+  the commit). It is recorded in the ClickUp comment after merging, e.g.
+  "Ver. 20261102_02 (PR #17)".
 - Every HTML page has its own version line (`index.html`, `get/index.html`).
   Update only the version of the file you change; each file counts its own
   numbers. Both files are called index.html, so check the first line to
@@ -83,6 +90,18 @@ Repository: SergeyGTH/Ayulyfe_landing. No build step, no framework.
   after each renewal download the new year's badge from the NAMA members area
   (2026 Member Badges -> Organizational Member Badge), replace both files and
   update the file names and alt text. Remove the badge if membership lapses.
+- Free vs Premium facts must be identical everywhere: the FAQ "Is AYULYFE
+  free?", the MobileApplication structured data (offers, featureList), the
+  download block, llms.txt and the store listings. Current facts: the free
+  version has all functions (16-question Dosha quiz with physical,
+  physiological and psychological report; Agni and symptoms quizzes; "for Me"
+  recommendations; ingredient and recipe database with cooking steps and
+  kitchen timer; 300+ articles; limited free AI Assistant messages). Premium
+  (in-app subscription) adds the 52-question Dosha assessment, the full recipe
+  and article library, seasonal detox programs and unlimited AI Assistant.
+  Never describe Premium as unlocking basic results.
+- The FAQ structured data (FAQPage) must contain exactly the visible FAQ
+  questions and answers, no extra or different ones.
 - Tone about medicine: Ayurveda complements modern medicine, never criticise
   or compete with it, and never make treatment or cure claims.
 - Keep the Account & Data Deletion section and the support@ayulyfe.com contact.
