@@ -1,4 +1,4 @@
-<!-- Ver. 20261022_01 -->
+<!-- Ver. 20261117_01 · qr-tracking -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,9 +38,24 @@
   var ua = navigator.userAgent || '';
   var isAndroid = /Android/i.test(ua);
   var isIOS = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-  var target = isAndroid ? document.getElementById('android').href
-             : isIOS ? document.getElementById('ios').href
-             : 'https://ayulyfe.com/#download';
+  // Pass the campaign (utm_*) on to the stores, so installs can be attributed:
+  // Google Play reads it from "referrer" (Play Console > Acquisition),
+  // App Store from "ct" + provider token "pt" (App Store Connect > Analytics > Campaigns).
+  var APPLE_PT = '127406146'; // App Store Connect provider token (public, appears in every campaign link)
+  var q = new URLSearchParams(location.search);
+  var utm = ['utm_source','utm_medium','utm_campaign','utm_content'].filter(function(k){ return q.get(k); })
+            .map(function(k){ return k + '=' + encodeURIComponent(q.get(k)); }).join('&');
+  var play = document.getElementById('android').href + (utm ? '&referrer=' + encodeURIComponent(utm) : '');
+  var ios = document.getElementById('ios').href;
+  if (APPLE_PT && q.get('utm_source')) {
+    var ct = (q.get('utm_source') + '_' + (q.get('utm_medium') || '')).slice(0, 30);
+    ios += '?pt=' + encodeURIComponent(APPLE_PT) + '&ct=' + encodeURIComponent(ct) + '&mt=8';
+  }
+  document.getElementById('android').href = play;
+  document.getElementById('ios').href = ios;
+  var target = isAndroid ? play
+             : isIOS ? ios
+             : 'https://ayulyfe.com/' + (utm ? '?' + utm : '') + '#download';
   var done = false;
   function go(){ if (!done) { done = true; location.replace(target); } }
   gtag('event', 'qr_get_app', {platform: isAndroid ? 'android' : (isIOS ? 'ios' : 'desktop'), event_callback: go});
