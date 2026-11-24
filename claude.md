@@ -22,6 +22,12 @@ Repository: SergeyGTH/Ayulyfe_landing. No build step, no framework.
   for link previews, and Google uses icon.png and app-screenshot.png from
   the structured data. Keep the names and keep them in the root. If one is
   replaced, keep the same size.
+- `legal/index.html` is the legal notice (mentions légales) at ayulyfe.com/legal/,
+  linked as "Legal" in both footers. It shows the publisher NBADVISORY SAS,
+  registered office, share capital, RCS number, phone, publication director
+  and host: the minimum required by LCEN art. 1-1 and Code de commerce R123-237. Meta's
+  business verification checks that the legal name appears on the website, so
+  do not remove it. Keep it in line with the Meta Business Info and store listings.
 - `get/index.html` is a small redirect page at ayulyfe.com/get/. The QR code
   in the download block points to it. It sends Android phones to Google Play,
   iPhones/iPads to the App Store and computers to the download block on the
