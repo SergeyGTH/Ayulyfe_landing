@@ -36,6 +36,12 @@ Repository: SergeyGTH/Ayulyfe_landing. No build step, no framework.
   home page. It is hidden from Google (noindex). It can also be used as one
   short "get the app" link in emails or print. Do not rename or move the
   folder: the QR code has this address built in.
+- `fb/index.html` is a short link for the Facebook Page at ayulyfe.com/fb
+  (used in the Page's About link and in its intro text). It only forwards
+  to /get/?utm_source=facebook&utm_medium=about, so the Page shows a short
+  clean address and visits are still tagged. No Google tag on it on purpose:
+  /get/ counts the visit, a tag here would count it twice. Hidden from Google
+  (noindex). Do not rename or move the folder while the Page uses it.
 - Favicon files in the repo root: `favicon.ico`, `favicon-32x32.png`,
   `favicon-96x96.png`, `apple-touch-icon.png`, `icon-192.png`, `icon.png` and
   `site.webmanifest`. They are linked in the <head> of index.html. If the app
